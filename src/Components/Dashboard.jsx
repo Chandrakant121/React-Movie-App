@@ -21,9 +21,6 @@ const Dashboard = () => {
     }, []);
 
 
-
-    // check()
-
     const backtologin = () => {
         navigate("/login")
         localStorage.clear();
