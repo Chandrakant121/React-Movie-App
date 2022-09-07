@@ -15,12 +15,9 @@ export const Movie = (props) => {
         }
     }
 
-
-
     return <div className="movie">
         <img src={images + props.poster_path} alt={props.title} />
         <div className="movie-info">
-            {/* <div>{props.overview}</div> */}
             <h3>{props.title}</h3>
             <span className={`tag ${setVoteClass(props.vote_average)}`} >{props.vote_average}</span>
         </div>
