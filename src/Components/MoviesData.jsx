@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { React } from "react"
 import { Movie } from "./Movie"
 import { useNavigate } from 'react-router-dom'
+import Navbar from "./Navbar"
 const MoviesData = () => {
     let datastore = JSON.parse(localStorage.getItem("logindetail"));
     const navigate = useNavigate()
@@ -50,20 +51,22 @@ const MoviesData = () => {
 
 
     return (
-        <>  {
-            datastore ?
-                <header>
-                    <div>
-                        <button onClick={logoutpage} >Logout</button>
-                        <button onClick={dash} >Dashboard</button>
-                    </div>
-                    <form onSubmit={handleOnsubmit}>
-                        <input type="search" className="search" placeholder="search" value={searchTerm}
-                            onChange={handleOnChange} />
-                    </form>
-                </header>
-                : <h1>Please Login</h1>
-        }   <div className="movie-container">
+        <>
+            {
+                datastore ?
+                    <header>
+                        <div>
+                            <button onClick={logoutpage} >Logout</button>
+                            <button onClick={dash} >Dashboard</button>
+                        </div>
+                        <form onSubmit={handleOnsubmit}>
+                            <input type="search" className="search" placeholder="search" value={searchTerm}
+                                onChange={handleOnChange} />
+                        </form>
+                    </header>
+                    : <h1 className='homepagetext' >Please Login</h1>
+            }
+            <div className="movie-container">
                 {
                     datastore ? movies.map((movie) => {
                         return (<Movie {...movie} />)

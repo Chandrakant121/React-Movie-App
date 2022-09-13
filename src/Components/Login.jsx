@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import "./Style.css"
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
+import Footer from './Footer'
 // import { AuthContext } from './AuthContext'
 // import MoviesData from './MoviesData'
 

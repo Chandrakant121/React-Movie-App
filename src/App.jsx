@@ -1,11 +1,12 @@
 import { React } from "react"
 import { BrowserRouter } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import MoviesData from "./Components/MoviesData";
 import Dashboard from "./Components/Dashboard";
+import Homepage from "./Components/Homepage";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Navbar />}></Route>
+          <Route path='/' element={<Homepage />}></Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/moviesdata" element={<MoviesData />} />

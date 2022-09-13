@@ -21,6 +21,9 @@ const Dashboard = () => {
     }, []);
 
 
+
+    // check()
+
     const backtologin = () => {
         navigate("/login")
         localStorage.clear();
@@ -31,9 +34,9 @@ const Dashboard = () => {
 
     return (
         <div>
+            <Navbar />
             {
                 datastore ? <div>
-                    <Navbar></Navbar>
                     <div className='dashboard'>
                         <h2>User Details</h2>
                         {/* <h4 onClick={backtologin} >LogOut</h4> */}

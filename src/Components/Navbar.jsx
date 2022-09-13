@@ -17,6 +17,8 @@ const Navbar = () => {
             <div className='homepage'>
                 <Link className='text' onClick={logout} to="/login">{datastore ? "Logout" : "Login"}</Link>
                 <Link className='text' onClick={movies} to="/register">{datastore ? "" : "Register"}</Link>
+                <Link className='text' to="/">Homepage</Link>
+                {/* <Link className='text' to="/dashboard">{datastore ? "" : "Dashboard"}</Link> */}
             </div>
         </div>
     )
