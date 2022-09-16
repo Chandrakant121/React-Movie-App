@@ -14,7 +14,7 @@ function Register() {
 	async function registerUser(event) {
 		event.preventDefault()
 		//this can be useful when: Clicking on a "Submit" button, prevent it from submitting a form.
-		const res = await fetch('http://localhost:5000/register', {
+		const res = await fetch('https://movieapi121.herokuapp.com/register', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
