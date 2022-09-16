@@ -11,7 +11,7 @@ const Dashboard = () => {
     // const [show, setShow] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/userData")
+        fetch("https://movieapi121.herokuapp.com/userData")
             .then((res) => {
                 return res.json();
             })
