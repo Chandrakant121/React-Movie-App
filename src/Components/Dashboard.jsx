@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 import Navbar from './Navbar'
 import "./Style.css"
 const Dashboard = () => {
-    const navigate = useNavigate()
     let datastore = JSON.parse(localStorage.getItem("logindetail"));
     console.log(datastore)
     const [data, setData] = useState([]);
@@ -20,18 +19,6 @@ const Dashboard = () => {
             });
     }, []);
 
-
-
-    // check()
-
-    const backtologin = () => {
-        navigate("/login")
-        localStorage.clear();
-    }
-    const backtomovies = () => {
-        navigate("/moviesdata")
-    }
-
     return (
         <div>
             <Navbar />
@@ -40,7 +27,6 @@ const Dashboard = () => {
                     <div className='dashboard'>
                         <h2>User Details</h2>
                         {/* <h4 onClick={backtologin} >LogOut</h4> */}
-                        <h4 onClick={backtomovies} >Movies</h4>
                         <div className='tabledata'>
                             <table>
                                 <thead>
@@ -65,12 +51,10 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                    :
-                    <div>
-                        <Navbar></Navbar>
-                        <h1 style={{ width: "200px", margin: "auto" }} >Please Login</h1>
-                    </div>
+                    : ""
+
             }
+            <Footer />
         </div>
     )
 }

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import { React } from "react"
 import { Movie } from "./Movie"
 import { useNavigate } from 'react-router-dom'
-import Navbar from "./Navbar"
+import Footer from "./Footer"
+
 const MoviesData = () => {
     let datastore = JSON.parse(localStorage.getItem("logindetail"));
     const navigate = useNavigate()
@@ -72,6 +73,7 @@ const MoviesData = () => {
                         return (<Movie {...movie} />)
                     }) : <div>Please Login</div>
                 }
+                <Footer />
             </div>
         </>
     );

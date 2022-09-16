@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Footer = () => {
+
+
     return (
         <div style={{ width: "100%", marginTop: "30px", height: "120px", textAlign: "center", backgroundColor: "black" }}>
             <img style={{ height: "35px", marginTop: "30px" }} src="https://freepngimg.com/thumb/categories/1371.png" alt="" />
